@@ -47,7 +47,7 @@ function registerListener(session, options, callback = () => {}) {
 			const filename = item.getFilename();
 			const name = path.extname(filename) ? filename : getFilenameFromMime(filename, item.getMimeType());
 			if (options.allowOverwrite) {
-				filePath = path.join(dir, name);
+				filePath = path.join(directory, name);
 			} else {
 				filePath = unusedFilename.sync(path.join(directory, name));
 			}
