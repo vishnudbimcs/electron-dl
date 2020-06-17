@@ -49,7 +49,7 @@ function registerListener(session, options, callback = () => {}) {
 			if (options.allowOverwrite) {
 				filePath = path.join(dir, name);
 			} else {
-				filePath = unusedFilename.sync(path.join(dir, name));
+				filePath = unusedFilename.sync(path.join(directory, name));
 			}
 		}
 
